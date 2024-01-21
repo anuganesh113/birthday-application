@@ -17,7 +17,7 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "assignment-ui/Modal.jsx"],
   "exclude": ["node_modules", "dist"]
 }
 

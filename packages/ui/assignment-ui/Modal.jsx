@@ -4,14 +4,18 @@ import './Modal.css';
 
 function Modal({people}) {
   const [showAll, setShowAll] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   const handleViewAllClick = () => {
+    // e.stopPropagation(); // Stop the event from bubbling up
     setShowAll(!showAll);
   };
 
   return (
-    <main>
-      <section className='container'>
+    <main onClick={() => setShowModal(!showModal)}>
+      {showModal ? 
+      (
+        <section className='container' onClick={(e) => e.stopPropagation()}>
         <h3>{people.length} birthdays today</h3>
         <div className={`users-list ${showAll ? 'show-all' : ''}`}>
           {people.map((person) => {
@@ -29,8 +33,12 @@ function Modal({people}) {
             );
           })}
         </div>
-        <button onClick={handleViewAllClick}>{showAll ? 'Hide Them' : 'View All'}</button>
+        <button className='main-btn' onClick={handleViewAllClick}>{showAll ? 'Hide them' : 'View all'}</button>
       </section>
+      ) : (
+        <button onClick={() => setShowModal(!showModal)}>Show Birthdays Modal</button>
+      )}
+   
     </main>
   );
 }
