@@ -284,6 +284,7 @@ main {
   outline: 1px solid rgba(242, 138, 178, 0.8);
   cursor: pointer;
   box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+  outline: none !important;
 }
 .container button:hover {
   background-color: white;

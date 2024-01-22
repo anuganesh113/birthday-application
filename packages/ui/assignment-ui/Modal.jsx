@@ -23,7 +23,7 @@ function Modal({people}) {
             const age = new Date().getFullYear() - new Date(dob.date).getFullYear();
 
             return (
-              <article key={login.uuid} className='person'>
+              <article key={login.uuid} className='person' sty>
                 <img src={picture.large} alt={name.first} />
                 <div>
                   <h4>{`${name.first} ${name.last}`}</h4>

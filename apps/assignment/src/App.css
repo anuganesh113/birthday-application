@@ -48,7 +48,7 @@ body {
 
 .skeleton-loader {
   width: 90vw;
-  max-width: 400px;
+  max-width: 350px;
   height: 500px;
   background-color: #eee;
   border-radius: 8px;
@@ -56,6 +56,7 @@ body {
   position: relative;
   animation: pulse 1.5s infinite;
   padding: 1.5rem 2rem;
+  transform: scale(0.85);
 }
 
 .skeleton-header {
